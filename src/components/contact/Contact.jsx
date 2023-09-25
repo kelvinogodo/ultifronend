@@ -2,7 +2,7 @@ import React from 'react'
 import './contact.css'
 import {BsFillWalletFill} from 'react-icons/bs'
 import {FaPhone,FaTelegramPlane} from 'react-icons/fa'
-import {AiOutlineMail} from 'react-icons/ai'
+import {ImLocation2} from 'react-icons/im'
 import {FiMail} from 'react-icons/fi'
 import { useState ,useRef} from 'react'
 import emailjs from '@emailjs/browser';
@@ -78,6 +78,19 @@ const Contact = () => {
                 </div>
                 <div className="contact-card-text">
                     <p>Join us on Telegram</p>
+                </div>
+            </div>
+            <div className="contact-card" data-aos="fade-up">
+                <div className="ball contact-ball">
+                    <ImLocation2 />
+                </div>
+                <div className="contact-card-text">
+                    <p>Miami (Headquarters)
+                        Starwood Capital Group
+                        2340 Collins Avenue
+                        Miami Beach, FL 33139
+                        Phone: 305.695.5200
+                    </p>
                 </div>
             </div>
         </div>
