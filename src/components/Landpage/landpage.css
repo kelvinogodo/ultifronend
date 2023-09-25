@@ -138,7 +138,6 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
       display: none;
     }
     .landpage-img-container{
-      width: 80%;
       margin-top: 40px;
     }
     .landpage-img-container img {
