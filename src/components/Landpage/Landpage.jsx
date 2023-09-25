@@ -44,7 +44,7 @@ const Landpage = () => {
                     animate={{y:0, opacity:1}}
                     transition={{duration:0.65,delay:0.4}}
                 >
-                    Starwood Capital Group is a private investment firm with a primary focus on global real estate. Since its inception in 1991, the Firm has raised over $75 billion of capital and currently has approximately $115 billion of assets under management. Starwood Capital Group! home of investments
+                    Starwood Capital Group is a private investment firm with a primary focus on global real estate. Since its inception in 1991, the Firm has raised over $75 billion of capital and currently has approximately $115 billion of assets under management. The $2.7 billion purchase of the portfolio from the Federal Deposit Insurance Corp. was one of the government’s largest.
                 </motion.p>
                 <motion.button className='launch-btn'
                     initial={{y:45, opacity:0}}
@@ -88,7 +88,7 @@ const Landpage = () => {
                     animate={{y:0, opacity:1}}
                     transition={{duration:0.65,delay:0.4}}
                 >
-                    In October 2009, a consortium led by Starwood Capital acquired a $4.5 billion face-value distressed loan portfolio owned by the former Corus Bank. The $2.7 billion purchase of the portfolio from the Federal Deposit Insurance Corp. Starwood Capital Group! home of investments
+                    In October 2009, a consortium led by Starwood Capital acquired a $4.5 billion face-value distressed loan portfolio owned by the former Corus Bank. The $2.7 billion purchase of the portfolio from the Federal Deposit Insurance Corp. We had fully realized 88 of the assets by the end of 2013, and sold the last major asset in March 2015.We can now look back on what has proven to be an extraordinary investment for investors
                 </motion.p>
                 <motion.button className='launch-btn'
                     initial={{y:45, opacity:0}}
@@ -120,7 +120,7 @@ const Landpage = () => {
                     animate={{y:0, opacity:1}}
                     transition={{duration:0.65,delay:0.4}}
                 >
-                    Since founding Starwood Capital during the depths of the savings & loan crisis with the purchase of non-performing loans and real estate assets from the Resolution Trust Corp., Chairman and CEO Barry Sternlicht has overseen the Firm’s growth into a diversified investment company that today encompasses approximately 5,000 employees.
+                    Since founding Starwood Capital during the depths of the savings & loan crisis with the purchase of non-performing loans and real estate assets from the Resolution Trust Corp., Chairman and CEO Barry Sternlicht has overseen the Firm’s growth into a diversified investment company that today encompasses approximately 5,000 employees.The collateral was primarily office, multifamily and mixed-use.
                 </motion.p>
                 <motion.button className='launch-btn'
                     initial={{y:45, opacity:0}}
