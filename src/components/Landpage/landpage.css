@@ -96,13 +96,19 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
       .floating-container-img3{
         right: 10px;
       }
+      .landpage-img-container .phone {
+        width: 500px;
+      }
   }
   @media screen and (max-width: 767px){
     .landpage{
       justify-content: center;
       background-position: center;
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='700' height='1440' preserveAspectRatio='none' viewBox='0 0 700 1440'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1064%26quot%3b)' fill='none'%3e%3crect width='700' height='1440' x='0' y='0' fill='rgba(4%2c 42%2c 112%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c568.974C103.364%2c549.714%2c193.336%2c494.081%2c274.832%2c427.647C349.255%2c366.979%2c388.042%2c279.809%2c447.354%2c204.3C528.787%2c100.629%2c700.744%2c32.268%2c688.504%2c-98.992C676.47%2c-228.039%2c486.9%2c-250.717%2c396.283%2c-343.381C313.403%2c-428.134%2c296.969%2c-591.462%2c181.346%2c-617.607C64.263%2c-644.082%2c-21.112%2c-497.975%2c-136.179%2c-463.784C-250.663%2c-429.766%2c-396.865%2c-500.974%2c-484.446%2c-419.775C-571.019%2c-339.511%2c-524.34%2c-194.231%2c-550.971%2c-79.218C-580.839%2c49.776%2c-691.13%2c171.044%2c-650.422%2c297.038C-609.711%2c423.041%2c-471.779%2c492.926%2c-349.61%2c544.004C-239.59%2c590.003%2c-117.231%2c590.818%2c0%2c568.974' fill='%23032157'%3e%3c/path%3e%3cpath d='M700 2005.914C823.907 2001.536 957.413 2069.6710000000003 1064.4180000000001 2007.046 1171.787 1944.208 1210.164 1807.998 1243.136 1688.042 1272.525 1581.119 1261.62 1471.199 1241.6860000000001 1362.117 1222.417 1256.673 1185.604 1159.107 1129.7559999999999 1067.615 1064.655 960.963 1005.367 839.406 891.3779999999999 788.228 772.633 734.915 629.359 739.757 508.796 788.82 392.894 835.986 312.04 941.211 249.341 1049.502 194.171 1144.789 177.75300000000004 1254.498 175.44100000000003 1364.58 173.34400000000005 1464.403 215.79000000000002 1553.952 236.695 1651.584 264.513 1781.499 213.115 1952.683 318.649 2033.394 421.976 2112.417 570 2010.507 700 2005.914' fill='%23053389'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1064'%3e%3crect width='700' height='1440' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
-  }
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: fit-content;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='1600' preserveAspectRatio='none' viewBox='0 0 1440 1600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3crect width='1440' height='1600' x='0' y='0' fill='rgba(81%2c 46%2c 95%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c561.942C105.322%2c549.872%2c202.548%2c511.205%2c292.998%2c455.913C385.187%2c399.558%2c465.462%2c329.677%2c526.17%2c240.294C595.931%2c137.58%2c681.545%2c27.384%2c667.864%2c-96.024C654.125%2c-219.958%2c530.798%2c-295.331%2c455.753%2c-394.913C374.129%2c-503.224%2c333.994%2c-657.797%2c207.548%2c-706.842C80.114%2c-756.27%2c-59.579%2c-687.818%2c-189.437%2c-645.164C-315.534%2c-603.746%2c-446.157%2c-562.201%2c-534.465%2c-463.117C-623.361%2c-363.373%2c-667.077%2c-230.618%2c-677.608%2c-97.425C-687.737%2c30.684%2c-653.544%2c157.502%2c-592.473%2c270.573C-534.081%2c378.684%2c-449.848%2c474.185%2c-339.588%2c528.409C-235.407%2c579.644%2c-115.343%2c575.161%2c0%2c561.942' fill='%2341254c'%3e%3c/path%3e%3cpath d='M1440 2134.017C1568.513 2160.042 1696.022 2232.667 1820.904 2192.699 1955.171 2149.727 2092.672 2050.58 2127.518 1913.979 2162.499 1776.848 2016.7939999999999 1659.979 1992.358 1520.583 1969.0729999999999 1387.753 2052.446 1243.262 1989.074 1124.225 1922.453 999.085 1784.261 929.512 1651.382 880.098 1511.815 828.197 1356.4569999999999 787.613 1215.873 836.693 1077.289 885.075 998.5450000000001 1023.528 908.499 1139.451 823.123 1249.362 716.468 1355.625 705.039 1494.329 693.8 1630.728 763.692 1762.641 848.286 1870.2269999999999 922.25 1964.295 1037.529 2007.467 1146.824 2056.191 1241.0819999999999 2098.212 1338.853 2113.534 1440 2134.017' fill='%23613772'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='1600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"
+      );  }
     .landpage-content-wrapper{
       flex-direction: column;
       justify-content: center;
@@ -114,6 +120,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
       align-self: center;
       padding-left: 0px;
       text-align: left;
+      box-shadow: none;
     }
     .landpage-text-container p{
       margin: 30px 0px;
@@ -134,14 +141,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
       width: 80%;
       margin-top: 40px;
     }
-    .floating-container-img1{
-      left: -10px;
-      width: 100%;
-    }
-    .floating-container-img3{
-      top: 170px;
-    }
-    .floating-container-img2{
-      left: -10px;
+    .landpage-img-container img {
+      width: 400px !important;
     }
   }

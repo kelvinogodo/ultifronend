@@ -37,14 +37,14 @@ const Landpage = () => {
                     animate={{y:0, opacity:1}}
                     transition={{duration:0.65,delay:0.2}}
                 >
-                starwood capital, home of investments.
+                starwood capital, Home of investments.
                 </motion.h1>
                 <motion.p
                     initial={{y:45, opacity:0}}
                     animate={{y:0, opacity:1}}
                     transition={{duration:0.65,delay:0.4}}
                 >
-                    Starwood Capital Group is a private investment firm with a primary focus on global real estate. Since its inception in 1991, the Firm has raised over $75 billion of capital and currently has approximately $115 billion of assets under management.
+                    Starwood Capital Group is a private investment firm with a primary focus on global real estate. Since its inception in 1991, the Firm has raised over $75 billion of capital and currently has approximately $115 billion of assets under management. Starwood Capital Group! home of investments
                 </motion.p>
                 <motion.button className='launch-btn'
                     initial={{y:45, opacity:0}}
@@ -88,7 +88,7 @@ const Landpage = () => {
                     animate={{y:0, opacity:1}}
                     transition={{duration:0.65,delay:0.4}}
                 >
-                    In October 2009, a consortium led by Starwood Capital acquired a $4.5 billion face-value distressed loan portfolio owned by the former Corus Bank. The $2.7 billion purchase of the portfolio from the Federal Deposit Insurance Corp.
+                    In October 2009, a consortium led by Starwood Capital acquired a $4.5 billion face-value distressed loan portfolio owned by the former Corus Bank. The $2.7 billion purchase of the portfolio from the Federal Deposit Insurance Corp. Starwood Capital Group! home of investments
                 </motion.p>
                 <motion.button className='launch-btn'
                     initial={{y:45, opacity:0}}

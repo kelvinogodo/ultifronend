@@ -98,5 +98,6 @@ nav ul li a {
     .logo-container{
         width: 40%;
         padding-left: 10px;
+        overflow-y: hidden;
     }
 }
