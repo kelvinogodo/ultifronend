@@ -139,4 +139,8 @@
     .plan-section{
       background-repeat: no-repeat;
    }
+   .card{
+    width: 100%;
+    margin:20px auto;
+   }
   }
