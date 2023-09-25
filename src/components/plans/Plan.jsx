@@ -94,10 +94,10 @@ const Plan = () => {
         {
                 withdrawMethods.map((withdrawmethod) => (
                   <div className="card">
-            <div className="plan-header">
-						<span className="plan-title">{withdrawmethod.type}</span>
-						<span className="price">{withdrawmethod.percent}</span>
-					</div>
+                  <div className="plan-header">
+                  <span className="plan-title">{withdrawmethod.type}</span>
+                  <span className="price">...</span>
+                </div>
                     <ul className="lists">
                       {
                         withdrawmethod.content.map(content => <li className="list">

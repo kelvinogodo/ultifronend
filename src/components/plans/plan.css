@@ -94,7 +94,8 @@
     .lists .list {
       margin-bottom: 0.5rem;
       display: flex;
-      margin-left: 0.5rem
+      margin-left: 0.5rem;
+      text-align: left;
     }
   
     .lists .list svg {

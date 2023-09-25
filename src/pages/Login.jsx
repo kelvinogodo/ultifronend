@@ -117,7 +117,7 @@ const Login = ({route}) => {
           </div>
           <div class="title_container">
             <p class="titles">Login to your Account</p>
-            <span class="subtitle">Welcome to passive income invest, login and enjoy the best investment experience.</span>
+            <span class="subtitle">Welcome to starwoodcapital, login and enjoy the best investment experience.</span>
           </div>
           <br/>
           <div class="input_containers">

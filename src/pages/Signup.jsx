@@ -394,7 +394,7 @@ const Signup = ({route}) => {
           <img src="/my_logo (1).png" alt="" className="signup-logo" onClick={()=>{
               navigate('/')
             }}/>
-              <span class="subtitle">Get started with Tradevolte, just create an account and enjoy the experience.</span>
+              <span class="subtitle">Get started with starwoodcapital, create an account and enjoy the experience.</span>
               <div class="input_containers">
                 <label class="input_labels" for="email_field">Firstname</label>
                 <span className="icont">
