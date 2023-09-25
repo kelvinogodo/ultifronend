@@ -1,0 +1,142 @@
+.plan-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    flex-direction: column;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.plan-card-container{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0px;
+    flex-wrap: wrap;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--mild-color);
+  }
+  
+  .my-plan-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+    width: 30%;
+    margin: 20px 0px;
+  }
+  .small-plan-head{
+    width: 100%;
+  }
+  .plan-card-headerdiv{
+    position: static;
+    width: 100%;
+  }
+  .svg-line{
+    width: 100%;
+    position: absolute;
+    color: #e26767;
+  }
+    .card {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin-bottom: 2rem;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0.25rem;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='900' preserveAspectRatio='none' viewBox='0 0 1440 900'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1281%26quot%3b)' fill='none'%3e%3crect width='1440' height='900' x='0' y='0' fill='rgba(95%2c 55%2c 116%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c706.755C133.518%2c705.23%2c259.739%2c651.033%2c369.89%2c575.56C477.796%2c501.625%2c569.67%2c403.832%2c618.949%2c282.664C667.087%2c164.3%2c658.028%2c34.471%2c641.478%2c-92.231C624.741%2c-220.366%2c613.036%2c-360.503%2c522.848%2c-453.05C433.92%2c-544.305%2c294.367%2c-552.148%2c169.34%2c-576.721C54.904%2c-599.213%2c-64.804%2c-632.894%2c-173.196%2c-589.853C-278.418%2c-548.071%2c-340.413%2c-443.583%2c-403.197%2c-349.373C-459.347%2c-265.119%2c-507.899%2c-175.161%2c-516.776%2c-74.301C-525.37%2c23.349%2c-472.705%2c110.635%2c-452.119%2c206.476C-424.589%2c334.648%2c-463.26%2c486.813%2c-375.362%2c584.074C-285.278%2c683.754%2c-134.346%2c708.29%2c0%2c706.755' fill='%235a346e'%3e%3c/path%3e%3cpath d='M1440 1496.812C1549.8029999999999 1500.7649999999999 1612.013 1370.882 1704.104 1310.953 1795.484 1251.4859999999999 1935.337 1246.0520000000001 1978.909 1146.1109999999999 2022.551 1046.011 1929.99 939.862 1912.917 832.005 1896.176 726.245 1952.786 597.25 1879.6480000000001 519.043 1806.125 440.424 1672.52 489.922 1568.198 463.397 1469.187 438.223 1385.228 356.648 1283.645 367.504 1175.7640000000001 379.033 1070.24 436.445 1005.529 523.529 942.325 608.586 931.4300000000001 722.775 941.242 828.289 949.8240000000001 920.58 1013.317 993.146 1056.81 1074.997 1097.33 1151.252 1129.777 1228.451 1187.841 1292.367 1262.105 1374.117 1329.626 1492.838 1440 1496.812' fill='%23643a7a'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1281'%3e%3crect width='1440' height='900' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+      padding: 1.5rem;
+    }
+  
+    .plan-header {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .plan-title {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 700;
+      color: #fff
+    }
+  
+    .price {
+      font-size: 3.75rem;
+      line-height: 1;
+      font-weight: 700;
+      color: #fff
+    }
+  
+    .desc {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.625;
+      color: rgb(232, 232, 232);
+    }
+  
+    .lists {
+      margin-bottom: 1.5rem;
+      flex: 1 1 0%;
+      color: rgb(232, 232, 232);
+    }
+  
+    .lists .list {
+      margin-bottom: 0.5rem;
+      display: flex;
+      margin-left: 0.5rem
+    }
+  
+    .lists .list svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      flex-shrink: 0;
+      margin-right: 0.5rem;
+      color: rgb(232, 232, 232);
+    }
+  
+    .action {
+      border: none;
+      outline: none;
+      display: inline-block;
+      border-radius: 0.25rem;
+      background-color: var(--mild-color);
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: rgba(17, 24, 39, 1);
+    }
+  @media (max-width: 990px) and (min-width: 768px){
+    .plan-section{
+       background-repeat: no-repeat;
+    }
+    .my-plan-container{
+      width: 45%;
+      padding: 40px 0px;
+    }
+  }
+  @media screen and (max-width: 767px){
+    .my-plan-container{
+      width: 100%;
+      padding: 40px 0px;
+    }
+    .container{
+      width: 100%;
+    }
+    .plan-section{
+      background-repeat: no-repeat;
+   }
+  }
