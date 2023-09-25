@@ -12,7 +12,11 @@ const Plan = () => {
           max:4999,
           image:'/btc.png',
           method:'BTC',
-          type:'basic plan',
+          type: 'commercial lending',
+            percent: '62.1%',
+          content: [
+          'originate floating-rate first mortgage loans','$7.08 portfolio carrying value','3-5 year average term','loan to value ratio','nearly $256 invested since inception with $0 of realization loan losses' 
+        ],
           percent:'8%'
         },
         {
@@ -21,8 +25,11 @@ const Plan = () => {
           max:9999,
           image:'/bnb.png',
           method:'USDT',
-          type:'mega plan',
-          percent:'10%'
+          type:'residencial lending',
+          percent: '10%',
+          content: [
+          'invest in non-agency residential loans and RMBS','$860M portfolio carrying value, including $613M of loans','Non-agency loans have 63% loan-value-ratio','target mid-teens levered returns' 
+        ],
         },
         {
           id:3,
@@ -30,8 +37,11 @@ const Plan = () => {
           max:29999,
           image:'/tron.png',
           method:'tether(TRC20)',
-          type:'ultra plan',
-          percent:'16%'
+          type:'owned real estate',
+          percent: '16%',
+          content: [
+          'invest in high qaulity stable real estate assets','unique ability to acquire assets out of CMBS trusts','$2.78 portfolio carrying value','9% to 12%' 
+        ],
         },
         {
           id:4,
@@ -39,8 +49,11 @@ const Plan = () => {
           max:59999,
           image:'/tron.png',
           method:'tether(TRC20)',
-          type:'vip plan',
-          percent:'24%'
+          type:'CMBS investing',
+          percent: '24%',
+          content: [
+          'originate floating-rate first mortgage loans','$7.08 portfolio carrying value','3-5 year average term','loan to value ratio','nearly $256 invested since inception with $0 of realization loan losses' 
+        ],
         },
         {
           id:5,
@@ -48,8 +61,11 @@ const Plan = () => {
           max:99999,
           image:'/tron.png',
           method:'tether(TRC20)',
-          type:'premium plan',
-          percent:'30%'
+          type:'special servicing',
+          percent: '30%',
+          content: [
+          'originate floating-rate first mortgage loans','$7.08 portfolio carrying value','3-5 year average term','loan to value ratio','nearly $256 invested since inception with $0 of realization loan losses' 
+        ],
         },
         {
           id:6,
@@ -57,8 +73,11 @@ const Plan = () => {
           max:500000,
           image:'/tron.png',
           method:'tether(TRC20)',
-          type:'ultimate plan',
-          percent:'50%'
+          type:'CMBS loan origination',
+          percent: '50%',
+          content: [
+          'originate floating-rate first mortgage loans','$7.08 portfolio carrying value','3-5 year average term','loan to value ratio','nearly $256 invested since inception with $0 of realization loan losses' 
+        ],
         },
       ])
   return (
@@ -75,34 +94,23 @@ const Plan = () => {
         {
                 withdrawMethods.map((withdrawmethod) => (
                   <div className="card">
-<div className="plan-header">
-						<span className="plan-title">Beginner</span>
-						<span className="price">Free</span>
+            <div className="plan-header">
+						<span className="plan-title">{withdrawmethod.type}</span>
+						<span className="price">{withdrawmethod.percent}</span>
 					</div>
-					<p className="desc">Etiam ac convallis enim, eget euismod dolor.</p>
-					<ul className="lists">
-						<li className="list">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							<span>Aenean quis</span>
-						</li>
-						<li className="list">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							<span>Morbi semper</span>
-						</li>
-						<li className="list">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							<span>Tristique enim nec</span>
-						</li>
+                    <ul className="lists">
+                      {
+                        withdrawmethod.content.map(content => <li className="list">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>{content}</span>
+						</li>)
+            }
 					</ul>
 					<button type="button" className="action">Get Started</button>
 				</div>
-                  ))}
+        ))}
         </div>
     </div>
   )
