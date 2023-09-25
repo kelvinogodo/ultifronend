@@ -43,7 +43,7 @@ const Userdashboardheader = ({route}) => {
 
     const [bgColor, setBgColor] = useState(false)
     const changeOnScroll = ()=>{
-        if(window.scrollY >= 90){
+        if(window.scrollY >= 50){
             setBgColor(true)
         }
         else{
@@ -66,11 +66,11 @@ const Userdashboardheader = ({route}) => {
                 </div>
                 <div className="dropdown-header">
                     <span className="profile-pic-container">
-                        {userData && userData.profilepicture !== '' ? <img src={userData.profilepicture} alt="" /> : userData.firstname.charAt(0)} 
+                        {userData && userData.profilepicture !== '' ? <img src={userData.profilepicture ? userData.profilepicture : ''} alt="" /> : userData.firstname.charAt(0)} 
                     </span>
                     <span className="dropdown-user-details">
                         <p className='dropdown-name'>{userData ? userData.firstname : 'john doe'}</p>
-                        <p className='dropdown-email'>{userData ? userData.email : 'johndoe@gmail.com'}</p>
+                        <p className='dropdown-email'>{userData ? userData.email : 'kelvinchukwuebuka385#gmail.com'}</p>
                     </span>
                 </div>
                 
@@ -96,17 +96,8 @@ const Userdashboardheader = ({route}) => {
                     navigate('/plans')
                 }}>
                     <AiOutlineStock />
-                    <p>invest</p>
+                    <p>select plan</p>
                 </div>
-                {
-                userData && userData.promo && 
-                    <div className="dropdown-tabs" onClick={()=>{
-                        navigate('/promoplan')
-                        }}>
-                        <AiOutlineStock />
-                        <p>promo plan</p>
-                    </div>  
-                }
                 <div className="dropdown-tabs" onClick={()=>{
                     navigate('/withdraw')
                 }}>
@@ -142,12 +133,9 @@ const Userdashboardheader = ({route}) => {
                 
             </div>
         }
-        <div  className={`userdashboard-header ${bgColor && 'scroll-color'}`}>
-            <div className="logo-container">
-                <img src="/bigLog.png" alt="" className='logo-b' onClick={()=>{
-                    navigate('/')
-                }}/>
-                <img src="/txtlog.png" alt="" className='logo-txt' onClick={()=>{
+        <div  className={`userdashboard-header ${bgColor && 'scroll-head'}`}>
+            <div className="userdashboard-logo-container">
+                <img src="/20230608_063112.png" alt="" className='logo' onClick={()=>{
                     navigate('/')
                 }}/>
             </div>
@@ -162,14 +150,8 @@ const Userdashboardheader = ({route}) => {
                     <li>
                         <Link to='/plans'>invest</Link>
                     </li>
-                    {
-                    userData && userData.promo && 
-                        <li>
-                                <Link to='/promoplan'>promo plan</Link>
-                        </li>
-                    }
                     <li>
-                        <Link to='/withdraw'>withdraw</Link>
+                        <Link to='/withdraw'>withdrawals</Link>
                     </li>
                     <li>
                         <Link to='/transactions'>transactions</Link>
@@ -177,6 +159,13 @@ const Userdashboardheader = ({route}) => {
                     <li>
                         <Link to='/referrals'>referrals</Link>
                     </li>
+                    {
+                        userData && userData.promo ? 
+                        <li>
+                             <Link to='/viplan'>vip plan</Link>
+                        </li>
+                        : ''
+                    }
                 </ul>
             </nav>
             <div className="header-profile-container" onClick={()=>{

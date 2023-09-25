@@ -1,7 +1,8 @@
 import React from 'react'
 import './userdashboardhomepage.css'
-import {BsArrowRightShort} from 'react-icons/bs'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { BsArrowRightShort } from 'react-icons/bs'
+import {MdOutlineDone} from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 import { useState,useEffect,useRef } from 'react'
 import {IoIosArrowRoundUp,IoIosArrowRoundDown} from 'react-icons/io'
 import {MdOutlineContentCopy} from 'react-icons/md'
@@ -26,6 +27,10 @@ const Userdashboardhomepage = ({route}) => {
                 })
                 const res = await req.json()
                 setUserData(res)
+
+                if (res.status === 'error') {
+                    navigate('/login')
+                }
                 setLoader(false) 
             }
             getData()
@@ -37,24 +42,24 @@ const Userdashboardhomepage = ({route}) => {
   return (
     <div className='homewrapper'>
       {
-        loader && 
+        loader &&
           <div className="wifi-loader-container">
-            <div id="wifi-loader">
-            <svg className="circle-outer" viewBox="0 0 86 86">
-                <circle className="back" cx="43" cy="43" r="40"></circle>
-                <circle className="front" cx="43" cy="43" r="40"></circle>
-                <circle className="new" cx="43" cy="43" r="40"></circle>
-            </svg>
-            <svg className="circle-middle" viewBox="0 0 60 60">
-                <circle className="back" cx="30" cy="30" r="27"></circle>
-                <circle className="front" cx="30" cy="30" r="27"></circle>
-            </svg>
-            <svg className="circle-inner" viewBox="0 0 34 34">
-                <circle className="back" cx="17" cy="17" r="14"></circle>
-                <circle className="front" cx="17" cy="17" r="14"></circle>
-            </svg>
-            <div className="text" data-text="login in..."></div>
-          </div>
+            <div class="loader">
+              <span class="l">p</span>
+              <span class="o">a</span>
+              <span class="a">s</span>
+              <span class="d">s</span>
+              <span class="i">i</span>
+              <span class="n">v</span>
+              <span class="g">e</span>
+              <span class="d1"> </span>
+              <span class="d2">I</span>
+              <span class="d3">n</span>
+              <span class="d4">c</span>
+              <span class="d5">o</span>
+              <span class="d6">m</span>
+              <span class="d7">e</span>
+            </div>
         </div>
       }
     <div className='dashboardhomepage'>
@@ -71,15 +76,6 @@ const Userdashboardhomepage = ({route}) => {
                         <BsArrowRightShort />
                     </button>
                 </div>
-                <div className="kyc-card-wrapper">
-                    <div className="kyc-card">
-                        <h3>kyc unverified</h3>
-                        <p>As mandated by the anti-fraud authority, you are to submit your KYC (know your customer), To help us prevent fraud from our system.</p>
-                        <Link to='/myprofile'>start kyc verification    
-                        </Link>
-                        <span className="kyc-line"></span>
-                    </div>
-                </div>
             </div>
             <div className="overview-container">
                 <div className="overview-card">
@@ -95,11 +91,11 @@ const Userdashboardhomepage = ({route}) => {
                     </div>
                     <div className="amount-pouches">
                         <h2>current deposit</h2>
-                        <h3>${userData && userData.invest.length !== 0 ? userData.invest[userData.invest.length - 1].amount : 0}.00 USD</h3>
+                        <h3>${userData && userData.deposit.length !== 0 ? userData.deposit[userData.deposit.length - 1].amount : 0}.00 USD</h3>
                     </div>
                     <div className="amount-pouches">
                         <h2>invested</h2>
-                        <h3>$ {userData ? userData.totalprofit : ''}.00 USD</h3>
+                        <h3>$ {userData && userData.invest.length !== 0 ? userData.invest[userData.invest.length - 1].amount : 0}.00 USD</h3>
                     </div>
                     <img src="/bar.png" alt="" className="bar"/>
                 </div>
@@ -116,11 +112,11 @@ const Userdashboardhomepage = ({route}) => {
                     </div>
                     <div className="amount-pouches">
                         <h2>interest earned</h2>
-                        <h3>${userData ? userData.totalprofit : ''}.00 USD</h3>
+                        <h3>${userData ? userData.periodicProfit : '0'}.00 USD</h3>
                     </div>
                     <div className="amount-pouches">
-                        <h2>bonus</h2>
-                        <h3>${userData ? userData.refBonus : ''}.00 USD</h3>
+                        <h2>referral commission</h2>
+                        <h3>${userData ? userData.refBonus : '0'}.00 USD</h3>
                     </div>
                     <img src="/bar2.png" alt="" className="bar" />
                 </div>
@@ -137,8 +133,8 @@ const Userdashboardhomepage = ({route}) => {
                         <h3>${userData ? userData.totaldeposit : ''}.00 USD</h3>
                     </div>
                     <div className="amount-pouches">
-                        <h2>from profits</h2>
-                        <h3>${userData ? userData.totalprofit : ''}.00 USD</h3>
+                        <h2>withdrawable profit after duration</h2>
+                        <h3>${userData ? userData.totalprofit + userData.refBonus : ''}.00 USD</h3>
                     </div>
                     <img src="/bar3.png" alt="" className="bar" />
                 </div>
@@ -150,25 +146,26 @@ const Userdashboardhomepage = ({route}) => {
                 <div className="referral-card1">
                     <div className="referraltext-wrapper">
                         <div className="referral-text-container">
-                            <h2>refer us and earn more</h2>
+                            <h2>refer us and earn 10% of every downline deposit</h2>
                             <p>Use the bellow link to invite your friends.</p>
                         </div>
                         <button className="invite-btn">invite</button>
                     </div>
                     <div className="click-to-copy-container">
-                        <button className='clipboard-btn'>
+                        <span className='clipboard-btn'>
                             <FiLink />
-                        </button>
-                        <input type="text" value={userData ? userData.referral : ''} ref={clipRef}/>
-                        <button className={`clipboard-btn ${clipBoard ? 'copied' : ''}` } onClick={()=>{
+                        </span>
+                        <input type="text" value={userData ? `passiveincomeinvest.org/user/${userData.username ? userData.username : userData.referral}` : ''} ref={clipRef}/>
+                        <span className={`clipboard-btn ${clipBoard ? <MdOutlineDone /> : ''}` } onClick={()=>{
                             copy()
                             setClipBoard(!clipBoard)
-                        }}>
+                              }}>
+                                  
                             {
                                 clipBoard ?
-                                'copied!' : <MdOutlineContentCopy />
+                                <MdOutlineDone /> : <MdOutlineContentCopy />
                             }
-                        </button>
+                        </span>
                     </div>  
                 </div>
                 <div className="referral-card1">
@@ -182,7 +179,7 @@ const Userdashboardhomepage = ({route}) => {
                         </div>
                         <div className="referral-text-container small-card">
                             <h2>{userData ? userData.refBonus : '        '} USD</h2>
-                            <p>referral bonus</p>
+                            <p>referral commission</p>
                         </div>
 
                     </div>
