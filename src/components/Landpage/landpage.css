@@ -13,6 +13,7 @@
   width: 100%;
   position: relative;
   padding: 0px !important;
+  box-shadow: none;
 }
 
 .swiper-slide1,
@@ -23,6 +24,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   border-radius: 0px !important;}
 .landpage-content-wrapper{
   position: relative;
+  margin-bottom: 0px;
 }
 .bg-svg{
   position: absolute;
@@ -97,7 +99,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
         right: 10px;
       }
       .landpage-img-container .phone {
-        width: 500px;
+        width: 400px;
       }
   }
   @media screen and (max-width: 767px){
@@ -107,8 +109,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
       background-repeat: no-repeat;
       background-size: cover;
       height: fit-content;
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='1600' preserveAspectRatio='none' viewBox='0 0 1440 1600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3crect width='1440' height='1600' x='0' y='0' fill='rgba(81%2c 46%2c 95%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c561.942C105.322%2c549.872%2c202.548%2c511.205%2c292.998%2c455.913C385.187%2c399.558%2c465.462%2c329.677%2c526.17%2c240.294C595.931%2c137.58%2c681.545%2c27.384%2c667.864%2c-96.024C654.125%2c-219.958%2c530.798%2c-295.331%2c455.753%2c-394.913C374.129%2c-503.224%2c333.994%2c-657.797%2c207.548%2c-706.842C80.114%2c-756.27%2c-59.579%2c-687.818%2c-189.437%2c-645.164C-315.534%2c-603.746%2c-446.157%2c-562.201%2c-534.465%2c-463.117C-623.361%2c-363.373%2c-667.077%2c-230.618%2c-677.608%2c-97.425C-687.737%2c30.684%2c-653.544%2c157.502%2c-592.473%2c270.573C-534.081%2c378.684%2c-449.848%2c474.185%2c-339.588%2c528.409C-235.407%2c579.644%2c-115.343%2c575.161%2c0%2c561.942' fill='%2341254c'%3e%3c/path%3e%3cpath d='M1440 2134.017C1568.513 2160.042 1696.022 2232.667 1820.904 2192.699 1955.171 2149.727 2092.672 2050.58 2127.518 1913.979 2162.499 1776.848 2016.7939999999999 1659.979 1992.358 1520.583 1969.0729999999999 1387.753 2052.446 1243.262 1989.074 1124.225 1922.453 999.085 1784.261 929.512 1651.382 880.098 1511.815 828.197 1356.4569999999999 787.613 1215.873 836.693 1077.289 885.075 998.5450000000001 1023.528 908.499 1139.451 823.123 1249.362 716.468 1355.625 705.039 1494.329 693.8 1630.728 763.692 1762.641 848.286 1870.2269999999999 922.25 1964.295 1037.529 2007.467 1146.824 2056.191 1241.0819999999999 2098.212 1338.853 2113.534 1440 2134.017' fill='%23613772'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='1600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"
-      );  }
+  }
     .landpage-content-wrapper{
       flex-direction: column;
       justify-content: center;

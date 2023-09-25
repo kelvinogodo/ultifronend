@@ -16,9 +16,9 @@ const Footer = () => {
         </div>
         <div className="quicklinks-container">
             <div className="quicklink-card-container">
-                <div className="quicklink-card" data-aos="fade-up">
+                {/* <div className="quicklink-card" data-aos="fade-up">
                     <img src="/my_logo (3).png" alt="" className='logo-txt' />
-                </div>
+                </div> */}
                 <div className="quicklink-card" data-aos="fade-up">
                     <Link href="/">home</Link>
                     <a href="#about">about</a>
