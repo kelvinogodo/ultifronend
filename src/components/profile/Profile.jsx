@@ -5,7 +5,7 @@ import Userdashboardheader from '../userdashboardheader/Userdashboardheader'
 import {BsImage} from 'react-icons/bs'
 import {RxUpload} from 'react-icons/rx'
 import Swal from 'sweetalert2'
-const Profile = () => {
+const Profile = ({route}) => {
   const [country,setCountry] = useState()
   const [zipCode,setZipCode] = useState()
   const [state,setState] = useState()
@@ -18,7 +18,7 @@ const Profile = () => {
   useEffect(()=>{
     if(localStorage.getItem('token')){
         const getData = async()=>{
-            const req = await fetch('http://localhost:5000/api/getData',{
+            const req = await fetch(`${route}/api/getData`,{
                 headers: {
                 'x-access-token': localStorage.getItem('token')
                 }
@@ -57,7 +57,7 @@ const Profile = () => {
   // update user info function 
 
   const updateUserData = async()=>{
-      const req = await fetch('http://localhost:5000/api/updateUserData',{
+      const req = await fetch(`${route}/api/updateUserData`,{
         method:'POST',
         headers:{
           'Content-Type':'application/json',
@@ -92,7 +92,7 @@ const Profile = () => {
       else{
         Swal.fire({
           title: 'error',
-          text: 'interna server error',
+          text: 'internal server error',
           icon: 'error',
           confirmButtonText: 'retry'
         })
@@ -112,7 +112,7 @@ const Profile = () => {
 
   return (
     <div>
-        <Userdashboardheader />
+      <Userdashboardheader route={route} />
         <div className="profile-page">
           <div className="page-header"> 
               <h2>Profile Settings</h2>

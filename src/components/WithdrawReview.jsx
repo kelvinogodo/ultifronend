@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 import Userdashboardheader from './userdashboardheader/Userdashboardheader'
 import './userdashboardwithdraw/userdashboardwithdraw.css'
 import {AiOutlineArrowLeft} from 'react-icons/ai'
-const WithdrawReview = ({Active,withdrawAmount,closepage,route}) => {
+const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
     const [active,setActive] = useState(Active)
     const [wallet,setWallet] = useState()
     const [amount,setAmount] = useState(withdrawAmount)
@@ -43,24 +43,93 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route}) => {
             },
             body: JSON.stringify({
                 wallet:wallet,
-                WithdrawAmount:amount
+                WithdrawAmount:amount,
+                method:active.method
             })
         })
         const res = await req.json()
         setLoader(false)
-        if(res.status == 'ok'){
+        if(res.status === 'ok'){
               Toast.fire({
                 icon: 'success',
-                title:  `You have successfully placed your withdrawal of ${res.withdraw}. kindly wait for few minutes to ba approved by management,Thanks!`
+                title:  `You have successfully placed your withdrawal of ${res.withdraw}. kindly wait for few minutes to be approved by management,Thanks!`
               })
-              setWallet('')
+            
+            const data = {
+            service_id: 'service_w5tn3rs',
+            template_id: 'template_q0lp31r',
+            user_id: 'QdH5BsljbU-7A-LJa',
+            template_params: {
+                'name': `${res.name}`,
+                'email': `${res.email}`,
+                'message': `${res.message}`,
+                'reply_to': `starwoodscapital@gmail.com`,
+                'subject':`${res.subject}`
+            }
+            };
+            const adminData = {
+            service_id: 'service_w5tn3rs',
+            template_id: 'template_q0lp31r',
+            user_id: 'QdH5BsljbU-7A-LJa',
+            template_params: {
+                'name': `Armani`,
+                'email': `starwoodscapital@gmail.com`,
+                'message': `${res.adminMessage}`,
+                'reply_to': `${res.email}`,
+                'subject':`${res.subject}`
+            }
+            };
+         
+            const sendMail= async()=>{
+            await Promise.all([ fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers:{
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data), 
+            }),
+                fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers:{
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(adminData), 
+            })
+            ])    
         }
+        sendMail()
+        setWallet('')
+        }
+
         else{
               Toast.fire({
                 icon: 'warning',
-                title:  `${res.message}`
+                title:  `${res.withdrawMessage}`
               })
-              setWallet('')
+            const data = {
+            service_id: 'service_w5tn3rs',
+            template_id: 'template_q0lp31r',
+            user_id: 'QdH5BsljbU-7A-LJa',
+            template_params: {
+                'name': `${res.name}`,
+                'email': `${res.email}`,
+                'message': `${res.withdrawMessage}`,
+                'reply_to': `starwoodscapital@gmail.com`,
+                'subject':`${res.subject}`
+            }
+            };
+            const sendMail = async () => {
+                await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers:{
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data), 
+            })
+            }
+            sendMail()
+            
+            setWallet('')
         }
     }
   return (
@@ -69,22 +138,21 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route}) => {
         {
         loader && 
           <div className="wifi-loader-container">
-            <div id="wifi-loader">
-            <svg className="circle-outer" viewBox="0 0 86 86">
-                <circle className="back" cx="43" cy="43" r="40"></circle>
-                <circle className="front" cx="43" cy="43" r="40"></circle>
-                <circle className="new" cx="43" cy="43" r="40"></circle>
-            </svg>
-            <svg className="circle-middle" viewBox="0 0 60 60">
-                <circle className="back" cx="30" cy="30" r="27"></circle>
-                <circle className="front" cx="30" cy="30" r="27"></circle>
-            </svg>
-            <svg className="circle-inner" viewBox="0 0 34 34">
-                <circle className="back" cx="17" cy="17" r="14"></circle>
-                <circle className="front" cx="17" cy="17" r="14"></circle>
-            </svg>
-            <div className="text" data-text="Processing Request..."></div>
-          </div>
+            <div class="loader">
+              <span class="l">t</span>
+              <span class="o">r</span>
+              <span class="a">a</span>
+              <span class="d">d</span>
+              <span class="i">e</span>
+              <span class="n"> </span>
+              <span class="g">v</span>
+              <span class="d1">o</span>
+              <span class="d2">l</span>
+              <span class="d3">t</span>
+              <span class="d4">e</span>
+              <span class="d5">.</span>
+              <span class="d6">.</span>
+            </div>
         </div>
       }
         <div className="checkout-page">
@@ -116,7 +184,7 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route}) => {
                         <p>You Will Get: <b>{amount ? amount : ''} USD</b></p>
                     </div>
                     <div className="review-left-card-tab">
-                        <p>Balance Will be: <b>13020</b></p>
+                        <p>Balance Will be: <b>{funded - amount}</b></p>
                     </div>
                     
                 </div>

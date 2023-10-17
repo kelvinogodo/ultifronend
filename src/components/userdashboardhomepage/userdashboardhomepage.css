@@ -22,9 +22,9 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
 }
 
 .welcome-kyc-section p {
@@ -36,13 +36,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: auto;
 }
 
 .username-container h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 2.5rem;
+    font-weight: 600;
     text-transform: capitalize;
+    color: rgb(83, 83, 83);
 }
 
 .username-container button {

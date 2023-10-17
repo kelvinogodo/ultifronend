@@ -3,22 +3,23 @@ import React from 'react'
 const Loader = () => {
   return (
     <div className="wifi-loader-container">
-            <div id="wifi-loader">
-            <svg className="circle-outer" viewBox="0 0 86 86">
-                <circle className="back" cx="43" cy="43" r="40"></circle>
-                <circle className="front" cx="43" cy="43" r="40"></circle>
-                <circle className="new" cx="43" cy="43" r="40"></circle>
-            </svg>
-            <svg className="circle-middle" viewBox="0 0 60 60">
-                <circle className="back" cx="30" cy="30" r="27"></circle>
-                <circle className="front" cx="30" cy="30" r="27"></circle>
-            </svg>
-            <svg className="circle-inner" viewBox="0 0 34 34">
-                <circle className="back" cx="17" cy="17" r="14"></circle>
-                <circle className="front" cx="17" cy="17" r="14"></circle>
-            </svg>
-            <div className="text" data-text="login in..."></div>
-          </div>
+            <div class="loader">
+              <span class="l">s</span>
+              <span class="o">t</span>
+              <span class="a">a</span>
+              <span class="d">r</span>
+              <span class="i">w</span>
+              <span class="n">o</span>
+              <span class="g">o</span>
+              <span class="d1">d</span>
+              <span class="d2">c</span>
+              <span class="d3">a</span>
+              <span class="d4">p</span>
+              <span class="d5">i</span>
+              <span class="d6">t</span>
+              <span class="d7">a</span>
+              <span class="d7">l</span>
+            </div>
         </div>
   )
 }

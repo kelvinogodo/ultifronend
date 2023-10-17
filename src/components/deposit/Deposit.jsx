@@ -51,7 +51,7 @@ const Deposit = () => {
           </div>
         </div>
       }
-      {userData && userData.deposit.length !== 0 && userData.deposit !== [] ? 
+      {userData && userData.deposit.length !== 0 && userData.deposit != [] ? 
       <div className="page-swiper-wrapper">
         <div className="floating-btn" onClick={()=>{
         navigate('/fundwallet')

@@ -65,9 +65,9 @@ const Signup = ({route}) => {
           localStorage.setItem('token', res.token)
           
           const userData = {
-            service_id: 'service_1vjbil8',
-            template_id: 'template_4vvpefj',
-            user_id: 'tSqoidag1E1HqNwYy',
+            service_id: 'service_w5tn3rs',
+            template_id: 'template_0e7xxnc',
+            user_id: 'QdH5BsljbU-7A-LJa',
             template_params: {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
@@ -75,14 +75,14 @@ const Signup = ({route}) => {
           };
 
           const adminData = {
-            service_id: 'service_1vjbil8',
-            template_id: 'template_uz5shqf',
-            user_id: 'tSqoidag1E1HqNwYy',
+            service_id: 'service_w5tn3rs',
+            template_id: 'template_q0lp31r',
+            user_id: 'QdH5BsljbU-7A-LJa',
             template_params: {
-                'name': `Armani Boss!`,
-                'email': `tradevolte@gmail.com`,
+                'name': `Ultimate!`,
+                'email': `starwoodscapital@gmail.com`,
                 'message': `${res.message}`,
-                'reply_to': `tradevolte@gmail.com`,
+                'reply_to': `starwoodscapital@gmail.com`,
                 'subject':`${res.adminSubject}`
             }
         };
@@ -110,14 +110,14 @@ const Signup = ({route}) => {
           }
           else {
             const referringUserData = {
-            service_id: 'service_1vjbil8',
-            template_id: 'template_uz5shqf',
-            user_id: 'tSqoidag1E1HqNwYy',
+            service_id: 'service_w5tn3rs',
+            template_id: 'template_q0lp31r',
+            user_id: 'QdH5BsljbU-7A-LJa',
             template_params: {
                 'name': `${res.referringUserName}`,
                 'email': `${res.referringUserEmail}`,
                 'message': `${res.referringUserMessage}`,
-                'reply_to': `tradevolte@gmail.com`,
+                'reply_to': `starwoodscapital@gmail.com`,
                 'subject':`${res.subject}`
             }
             };

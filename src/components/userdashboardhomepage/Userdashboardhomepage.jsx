@@ -45,20 +45,21 @@ const Userdashboardhomepage = ({route}) => {
         loader &&
           <div className="wifi-loader-container">
             <div class="loader">
-              <span class="l">p</span>
-              <span class="o">a</span>
-              <span class="a">s</span>
-              <span class="d">s</span>
-              <span class="i">i</span>
-              <span class="n">v</span>
-              <span class="g">e</span>
-              <span class="d1"> </span>
-              <span class="d2">I</span>
-              <span class="d3">n</span>
-              <span class="d4">c</span>
-              <span class="d5">o</span>
-              <span class="d6">m</span>
-              <span class="d7">e</span>
+              <span class="l">s</span>
+              <span class="o">t</span>
+              <span class="a">a</span>
+              <span class="d">r</span>
+              <span class="i">w</span>
+              <span class="n">o</span>
+              <span class="g">o</span>
+              <span class="d1">d</span>
+              <span class="d2">c</span>
+              <span class="d3">a</span>
+              <span class="d4">p</span>
+              <span class="d5">i</span>
+              <span class="d6">t</span>
+              <span class="d7">a</span>
+              <span class="d7">l</span>
             </div>
         </div>
       }
@@ -66,15 +67,9 @@ const Userdashboardhomepage = ({route}) => {
        
         <div className="dashboardhomepagewrapper">
             <div className="welcome-kyc-section">
-                <p>welcome!</p>
+                <p>wallet Balance</p>
                 <div className="username-container">
-                    <h2>{userData ? userData.firstname : ''}</h2>
-                    <button className="active-investment-btn" onClick={()=>{
-                        navigate('/investments')
-                    }}>
-                        active investment
-                        <BsArrowRightShort />
-                    </button>
+                    <h2>${userData ? userData.funded : ''}.00 USD</h2>
                 </div>
             </div>
             <div className="overview-container">
@@ -159,8 +154,7 @@ const Userdashboardhomepage = ({route}) => {
                         <span className={`clipboard-btn ${clipBoard ? <MdOutlineDone /> : ''}` } onClick={()=>{
                             copy()
                             setClipBoard(!clipBoard)
-                              }}>
-                                  
+                              }}>   
                             {
                                 clipBoard ?
                                 <MdOutlineDone /> : <MdOutlineContentCopy />

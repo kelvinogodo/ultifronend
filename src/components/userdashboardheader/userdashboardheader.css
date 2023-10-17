@@ -231,7 +231,7 @@
 .userdashboard-logo-container img {
     object-fit: cover;
     width: 45%;
-    height: 100%;
+    margin-top: -40px;
 }
 
 .scroll-head {
@@ -281,6 +281,5 @@
     .userdashboard-logo-container img {
         object-fit: cover;
         width: 60%;
-        height: 100%;
     }
 }
