@@ -313,7 +313,7 @@ const Userdashboardplans = ({route}) => {
                     <div className="plan-card-headerdiv">
                       <span className="small-plan-head">
                         <h3>{withdrawmethod.percent}</h3>
-                        <p>weely</p>
+                        <p>monthly</p>
                       </span>
                       <span className="small-plan-head">
                         <h3>pay</h3>
@@ -338,9 +338,9 @@ const Userdashboardplans = ({route}) => {
                         <p>{withdrawmethod.percent}</p>
                       </div>
                       <div className="investrange-card invest-card">
-                        <p>total return</p>
+                        <p>duration</p>
                         <RxDash />
-                        <p> {withdrawmethod.percent}</p>
+                        <p> {withdrawmethod.duration}</p>
                       </div>
                     </div>
                     <button className="deposit-btn" onClick={()=>{
