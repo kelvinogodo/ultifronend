@@ -137,6 +137,14 @@
     width: fit-content;
     border-radius: 4rem;
     cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+.dash-btn svg{
+    font-size: 1.5rem;
+    margin-right: 10px;
 }
 .overview-card {
     width: 50%;

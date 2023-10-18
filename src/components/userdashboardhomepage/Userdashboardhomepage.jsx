@@ -8,7 +8,8 @@ import {FaUser} from 'react-icons/fa'
 import {MdOutlineContentCopy} from 'react-icons/md'
 import { FiLink } from 'react-icons/fi'
 import { FaUsers } from 'react-icons/fa'
-import {FaExchangeAlt} from 'react-icons/fa'
+import { FaExchangeAlt,FaHandHoldingUsd } from 'react-icons/fa'
+import {CgArrowsExchange} from 'react-icons/cg'
 const Userdashboardhomepage = ({route}) => {
     const navigate = useNavigate()
     const [clipBoard, setClipBoard] = useState(false)
@@ -75,8 +76,12 @@ const Userdashboardhomepage = ({route}) => {
                 </div>
             </div>
                   <div className="dash-btn-container">
-                      <button className='dash-btn' onClick={()=>navigate('/fundwallet')}>deposit</button>
-                      <button className='dash-btn' onClick={()=>navigate('/withdraw')}>withdraw</button>
+                      <button className='dash-btn' onClick={() => navigate('/fundwallet')}>
+                          <CgArrowsExchange />deposit
+                      </button>
+                      <button className='dash-btn' onClick={() => navigate('/withdraw')}>
+                          <FaHandHoldingUsd />withdraw
+                      </button>
                   </div>   
             <div className="overview-container">
                       <div className="overview-card">

@@ -13,6 +13,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
+import Loader from '../Loader'
 import { Pagination, Navigation ,FreeMode} from "swiper";
 const Userdashboardplans = ({route}) => {
   const [showModal,setShowModal] =useState(false)
@@ -27,53 +28,53 @@ const Userdashboardplans = ({route}) => {
   const [withdrawMethods,setWithdrawalMethods] = useState([
     {
       id:1,
-      min:300,
-      max:4999,
+      min:400,
+      max:15000,
       image:'/btc.png',
       method:'BTC',
-      type:'basic plan',
-      percent:'8%'
+      type:'crypto plan',
+      percent:'6%'
     },
     {
       id:2,
-      min:5000,
-      max:9999,
+      min:4000,
+      max:'unlimited',
       image:'/bnb.png',
       method:'USDT',
-      type:'mega plan',
+      type:'IRA plan',
       percent:'10%'
     },
     {
       id:3,
-      min:10000,
-      max:29999,
+      min:15000,
+      max:'unlimited',
       image:'/tron.png',
       method:'tether(TRC20)',
-      type:'ultra plan',
-      percent:'16%'
+      type:'real estate plan',
+      percent:'38%'
     },
     {
       id:4,
-      min:30000,
-      max:59999,
+      min:5000,
+      max:18000,
       image:'/tron.png',
       method:'tether(TRC20)',
-      type:'vip plan',
-      percent:'24%'
+      type:'stocks',
+      percent:'15%'
     },
     {
       id:5,
-      min:60000,
-      max:99999,
+      min:1800,
+      max:7000,
       image:'/tron.png',
       method:'tether(TRC20)',
-      type:'premium plan',
-      percent:'30%'
+      type:'401k plan',
+      percent:'12%'
     },
     {
       id:6,
-      min:100000,
-      max:500000,
+      min:30000,
+      max:'unlimited',
       image:'/tron.png',
       method:'tether(TRC20)',
       type:'ultimate plan',
@@ -148,24 +149,7 @@ const Userdashboardplans = ({route}) => {
       <div>
       {
           loader && 
-            <div className="wifi-loader-container">
-              <div id="wifi-loader">
-              <svg className="circle-outer" viewBox="0 0 86 86">
-                  <circle className="back" cx="43" cy="43" r="40"></circle>
-                  <circle className="front" cx="43" cy="43" r="40"></circle>
-                  <circle className="new" cx="43" cy="43" r="40"></circle>
-              </svg>
-              <svg className="circle-middle" viewBox="0 0 60 60">
-                  <circle className="back" cx="30" cy="30" r="27"></circle>
-                  <circle className="front" cx="30" cy="30" r="27"></circle>
-              </svg>
-              <svg className="circle-inner" viewBox="0 0 34 34">
-                  <circle className="back" cx="17" cy="17" r="14"></circle>
-                  <circle className="front" cx="17" cy="17" r="14"></circle>
-              </svg>
-              <div className="text" data-text="login in..."></div>
-            </div>
-          </div>
+            <Loader />
         }
           {
             showModal &&
