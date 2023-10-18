@@ -50,8 +50,8 @@ const Investments = ({route}) => {
                 <td>amount</td>
                 <td>plan</td>
                 <td>started</td>
-                <td>to end</td>
-                <td>total profit</td>
+                <td>profit earned</td>
+                <td>total profit per day</td>
               </tr>
             </thead>
             <tbody>
@@ -61,7 +61,7 @@ const Investments = ({route}) => {
                     <td>${refer.amount} USD</td>
                     <td>{refer.plan}</td>
                     <td>{refer.startDate}</td>
-                    <td>{refer.endDate}</td>
+                    <td>{userData.periodicProfit ? userData.periodicProfit : '0.00 USD'}</td>
                     <td>${refer.profit} USD</td>
                   </tr>
                 )
@@ -73,13 +73,12 @@ const Investments = ({route}) => {
       :
       <div className="page-swiper-wrapper">
       <div className="failure-page no-referral-page">
-        <img src="/Data_PortabilityPrivacy_BANNER_003.gif" alt="" className='failure-img'/>
+        <img src="/preview.gif" alt="" className='failure-img'/>
         <p>You have not invested yet. Click the button below to make your first investment</p>
         <Link to='/fundwallet'>invest</Link>
       </div>
       </div>
       }
-     
 </div>
   )
 }
