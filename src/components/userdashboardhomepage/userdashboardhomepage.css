@@ -325,8 +325,6 @@
     }
 
     .overview-card {
-        margin-top: 30px;
-        min-height: 200px;
         width: 100%;
     }
 
@@ -342,5 +340,17 @@
 
     .dashboardhomepagewrapper {
         width: 95%;
+    }
+    .overview-icon-container{
+        width: 100%;
+    }
+    .dash-btn-container{
+        width: 100%;
+    }
+    .overview-icon-container{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        font-size: 1.5rem;
     }
 }
