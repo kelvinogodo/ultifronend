@@ -33,7 +33,8 @@ const Userdashboardplans = ({route}) => {
       image:'/btc.png',
       method:'BTC',
       type:'crypto plan',
-      percent:'6%'
+      percent: '6%',
+      duration:'weekly'
     },
     {
       id:2,
@@ -42,7 +43,8 @@ const Userdashboardplans = ({route}) => {
       image:'/bnb.png',
       method:'USDT',
       type:'IRA plan',
-      percent:'10%'
+      percent: '10%',
+      duration:'monthly'
     },
     {
       id:3,
@@ -51,7 +53,8 @@ const Userdashboardplans = ({route}) => {
       image:'/tron.png',
       method:'tether(TRC20)',
       type:'real estate plan',
-      percent:'38%'
+      percent: '40%',
+      duration:'monthly'
     },
     {
       id:4,
@@ -60,7 +63,8 @@ const Userdashboardplans = ({route}) => {
       image:'/tron.png',
       method:'tether(TRC20)',
       type:'stocks',
-      percent:'15%'
+      percent: '15%',
+      duration:'weekly'
     },
     {
       id:5,
@@ -69,7 +73,8 @@ const Userdashboardplans = ({route}) => {
       image:'/tron.png',
       method:'tether(TRC20)',
       type:'401k plan',
-      percent:'12%'
+      percent: '12%',
+      duration:'monthly'
     },
     {
       id:6,
@@ -78,7 +83,8 @@ const Userdashboardplans = ({route}) => {
       image:'/tron.png',
       method:'tether(TRC20)',
       type:'ultimate plan',
-      percent:'50%'
+      percent: '50%',
+      duration:'monthly'
     },
   ])
 
@@ -267,9 +273,9 @@ const Userdashboardplans = ({route}) => {
                         <p>{withdrawmethod.percent}</p>
                       </div>
                       <div className="investrange-card invest-card">
-                        <p>total return</p>
+                        <p>duration</p>
                         <RxDash />
-                        <p> {withdrawmethod.percent}</p>
+                        <p> {withdrawmethod.duration}</p>
                       </div>
                     </div>
                     <button className="deposit-btn" onClick={()=>{
