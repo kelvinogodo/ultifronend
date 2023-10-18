@@ -79,21 +79,33 @@ const Userdashboardhomepage = ({route}) => {
                       <button className='dash-btn' onClick={()=>navigate('/withdraw')}>withdraw</button>
                   </div>   
             <div className="overview-container">
-                <div className="overview-card">
-                          <div className="overview-icon-container">
-                              <FaUser />
-                          </div>     
-                          <div className="overview-icon-container">
-                              <RiLuggageDepositLine />
-                          </div>     
-                          <div className="overview-icon-container">
-                              <FaUsers />
-                          </div>     
-                          <div className="overview-icon-container">
-                              <FaExchangeAlt />
-                          </div>     
+                      <div className="overview-card">
+                        <div className="overview-icon-wrapper" onClick={()=>navigate('/profile')}>
+                        <div className="overview-icon-container">
+                            <FaUser />
+                        </div>
+                        <small>profile</small>
+                        </div>
+                        <div className="overview-icon-wrapper" onClick={()=>navigate('/plans')}>
+                        <div className="overview-icon-container">
+                            <RiLuggageDepositLine />
+                        </div>
+                        <small>invest</small>
+                        </div>
+                        <div className="overview-icon-wrapper" onClick={()=>navigate('/referrals')}>
+                        <div className="overview-icon-container">
+                            <FaUsers />
+                        </div>
+                        <small>referrals</small>
+                        </div>
+                        <div className="overview-icon-wrapper" onClick={()=>navigate('/transactions')}>
+                        <div className="overview-icon-container">
+                            <FaExchangeAlt />
+                        </div>
+                        <small>transactions</small>
+                        </div>             
+                    </div>
                 </div>
-            </div>
             <div className="price-chartt-section">
                 <iframe src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505" style={{width:"100%",height:"536px",scrolling:"none",marginWidth:"0",marginHeight:"0", frameBorder:"0", border:"0",lineHeight: '14px'}}></iframe>
             </div>
