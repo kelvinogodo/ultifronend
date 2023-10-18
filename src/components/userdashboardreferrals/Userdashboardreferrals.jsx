@@ -81,16 +81,16 @@ const Userdashboardreferrals = ({route}) => {
             <img src="/ref.png" alt="" className='failure-img'/>
             <p>You haven't referred any user yet, click below to copy your referral link</p>
             <div className="click-to-copy-container">
-                <input type="text" value='ac4d43bccf48793e5efc70d5fb1afb42eeca6622bbdb220fb62b63b66ff00f0a' ref={clipRef}/>
-                <button className={`clipboard-btn ${clipBoard ? 'copied' : ''}` } onClick={()=>{
+                <input type="text" value={`starwoodcapital.org/user/${userData && userData.username}`} ref={clipRef}/>
+                <span className={`clipboard-btn ${clipBoard ? <MdOutlineDone /> : ''}` } onClick={()=>{
                     copy()
                     setClipBoard(!clipBoard)
                 }}>
                     {
                         clipBoard ?
-                        'copied!' : <MdOutlineContentCopy />
+                        <MdOutlineDone /> : <MdOutlineContentCopy />
                     }
-                </button>
+                </span>
             </div>
             
           </div>
