@@ -63,7 +63,7 @@ const Signup = ({route}) => {
         setLoader(false)
         if(res.status === 'ok') { 
           localStorage.setItem('token', res.token)
-          
+
           const userData = {
             service_id: 'service_w5tn3rs',
             template_id: 'template_0e7xxnc',
