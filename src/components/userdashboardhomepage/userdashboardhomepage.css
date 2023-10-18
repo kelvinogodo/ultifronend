@@ -378,4 +378,10 @@
     .overview-icon-wrapper small{
         font-size: 10px;
     }
+    .dash-btn svg {
+        display: none;
+    }
+    .dash-btn{
+        margin:0px ;
+    }
 }
