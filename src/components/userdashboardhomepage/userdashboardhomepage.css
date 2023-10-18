@@ -159,6 +159,8 @@
     font-family: 'poppins';
     font-size: small;
     margin-top: 10px;
+    width: 100%;
+    text-align: center;
 }
 .overview-icon-container{
     width: 90px;
@@ -364,5 +366,8 @@
         width: 60px;
         border-radius: 50%;
         font-size: 1.5rem;
+    }
+    .overview-icon-wrapper small{
+        font-size: 10px;
     }
 }
