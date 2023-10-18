@@ -37,10 +37,10 @@ const Plan = () => {
           max:29999,
           image:'/tron.png',
           method:'tether(TRC20)',
-          type:'owned real estate',
+          type:'owned real estate investment',
           percent: '16%',
           content: [
-          'invest in high qaulity stable real estate assets','unique ability to acquire assets out of CMBS trusts','$2.78 portfolio carrying value','9% to 12%' 
+          'invest in high qaulity stable real estate assets','unique ability to acquire assets out of CMBS trusts','$2.78 portfolio carrying value','9% to 12% investment returns monthly and a minimum loan ratio of 1:5' 
         ],
         },
         {
