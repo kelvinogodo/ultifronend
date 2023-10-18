@@ -122,118 +122,49 @@
     justify-content: space-between;
     padding: 40px 0px 50px 0px;
     flex-wrap: wrap;
+    flex-direction: column;
 }
-
+.dash-btn-container{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 20px;
+    
+}
+.dash-btn{
+    padding: 15px 50px;
+    width: fit-content;
+    border-radius: 4rem;
+    cursor: pointer;
+}
 .overview-card {
-    width: 335px;
-    background-color: white;
-    box-shadow: 0px 0px 1px rgba(147, 165, 230, 0.719);
+    width: 50%;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    flex-direction: column;
-    min-height: 230px;
+    justify-content: space-around;
+    margin-top: 0px;
+    min-height: 100px;
     padding: 10px 20px;
-    position: relative;
 }
-
-.bar {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    object-fit: contain;
-    height: 70px;
-}
-
-.amount-header {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.amount-header h2 {
-    font-size: .9rem;
-    font-weight: 500;
-    font-family: 'Lato';
-    color: rgb(71, 125, 160);
-}
-
-.amount-holder {
-    width: 100%;
+.overview-icon-container{
+    width: 90px;
+    height: 90px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 70%;
-    margin-right: auto;
-    margin-top: 10px;
+    justify-content: center;
+    background-color: white;
+    color:var(--color-variant);
+    box-shadow: 0px 0px 1px rgba(147, 165, 230, 0.719);
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
 }
-
-.amount-holder h3 {
-    font-size: 1.3rem;
-    font-family: 'Lato';
-    color: rgb(53, 53, 53);
-    font-weight: 400;
+.overview-icon-container:hover{
+    box-shadow: 0px 0px 10px rgba(212, 213, 214, 0.719);
 }
-
-.arrow-p {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.red {
-    color: red;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.red p {
-    margin-right: 2px;
-    font-size: .8rem;
-}
-
-.red svg {
-    font-size: 1.6rem;
-    font-weight: 400;
-}
-
-.arrow-p p {
-    margin-right: 2px;
-    font-size: .8rem;
-}
-
-.arrow-p svg {
-    font-size: 1.6rem;
-    color: rgb(0, 158, 0);
-    font-weight: 400;
-}
-
-.amount-pouches {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.amount-pouches h2 {
-    font-size: .9rem;
-    font-weight: 500;
-    font-family: 'lato';
-    color: rgb(71, 125, 160);
-    margin-bottom: 5px;
-    text-transform: capitalize !important;
-}
-
-.amount-pouches h3 {
-    font-size: 1rem;
-    font-family: 'Lato';
-    color: rgb(39, 39, 39);
-    font-weight: 400;
-    text-transform: capitalize;
-}
-
 .price-chartt-section {
     width: 100%;
     height: auto;

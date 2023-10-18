@@ -1,12 +1,14 @@
 import React from 'react'
 import './userdashboardhomepage.css'
-import { BsArrowRightShort } from 'react-icons/bs'
+import { RiLuggageDepositLine } from 'react-icons/ri'
 import {MdOutlineDone} from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 import { useState,useEffect,useRef } from 'react'
-import {IoIosArrowRoundUp,IoIosArrowRoundDown} from 'react-icons/io'
+import {FaUser} from 'react-icons/fa'
 import {MdOutlineContentCopy} from 'react-icons/md'
-import {FiLink} from 'react-icons/fi'
+import { FiLink } from 'react-icons/fi'
+import { FaUsers } from 'react-icons/fa'
+import {FaExchangeAlt} from 'react-icons/fa'
 const Userdashboardhomepage = ({route}) => {
     const navigate = useNavigate()
     const [clipBoard, setClipBoard] = useState(false)
@@ -72,66 +74,24 @@ const Userdashboardhomepage = ({route}) => {
                     <h2>${userData ? userData.funded : ''}.00 USD</h2>
                 </div>
             </div>
+                  <div className="dash-btn-container">
+                      <button className='dash-btn' onClick={()=>navigate('/fundwallet')}>deposit</button>
+                      <button className='dash-btn' onClick={()=>navigate('/withdraw')}>withdraw</button>
+                  </div>   
             <div className="overview-container">
                 <div className="overview-card">
-                    <div className="amount-header">
-                        <h2>Total Deposit</h2>
-                        <div className="amount-holder">
-                            <h3>$ {userData && userData.totaldeposit !== undefined ? userData.totaldeposit : ''}.00 USD</h3>
-                            <span className="arrow-p">
-                                <p>1.93%</p>
-                                <IoIosArrowRoundUp />
-                            </span>
-                        </div>
-                    </div>
-                    <div className="amount-pouches">
-                        <h2>current deposit</h2>
-                        <h3>${userData && userData.deposit.length !== 0 ? userData.deposit[userData.deposit.length - 1].amount : 0}.00 USD</h3>
-                    </div>
-                    <div className="amount-pouches">
-                        <h2>invested</h2>
-                        <h3>$ {userData && userData.invest.length !== 0 ? userData.invest[userData.invest.length - 1].amount : 0}.00 USD</h3>
-                    </div>
-                    <img src="/bar.png" alt="" className="bar"/>
-                </div>
-                <div className="overview-card">
-                <div className="amount-header">
-                        <h2>Total Withdraw</h2>
-                        <div className="amount-holder">
-                            <h3>${userData ? userData.totalwithdraw : ''}.00 USD </h3>
-                            <span className="red">
-                                <p>1.93%</p>
-                                <IoIosArrowRoundDown />
-                            </span>
-                        </div>
-                    </div>
-                    <div className="amount-pouches">
-                        <h2>interest earned</h2>
-                        <h3>${userData ? userData.periodicProfit : '0'}.00 USD</h3>
-                    </div>
-                    <div className="amount-pouches">
-                        <h2>referral commission</h2>
-                        <h3>${userData ? userData.refBonus : '0'}.00 USD</h3>
-                    </div>
-                    <img src="/bar2.png" alt="" className="bar" />
-                </div>
-                <div className="overview-card">
-                <div className="amount-header">
-                        <h2>Balance in Account</h2>
-                        <div className="amount-holder">
-                            <h3>${userData ? userData.funded : ''}.00 USD </h3>
-                            
-                        </div>
-                    </div>
-                    <div className="amount-pouches">
-                        <h2>from deposits</h2>
-                        <h3>${userData ? userData.totaldeposit : ''}.00 USD</h3>
-                    </div>
-                    <div className="amount-pouches">
-                        <h2>withdrawable profit after duration</h2>
-                        <h3>${userData ? userData.totalprofit + userData.refBonus : ''}.00 USD</h3>
-                    </div>
-                    <img src="/bar3.png" alt="" className="bar" />
+                          <div className="overview-icon-container">
+                              <FaUser />
+                          </div>     
+                          <div className="overview-icon-container">
+                              <RiLuggageDepositLine />
+                          </div>     
+                          <div className="overview-icon-container">
+                              <FaUsers />
+                          </div>     
+                          <div className="overview-icon-container">
+                              <FaExchangeAlt />
+                          </div>     
                 </div>
             </div>
             <div className="price-chartt-section">
