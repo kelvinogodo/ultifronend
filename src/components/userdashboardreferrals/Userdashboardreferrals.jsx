@@ -55,18 +55,18 @@ const Userdashboardreferrals = ({route}) => {
                     <td>Lastname</td>
                     <td>Joined At</td>
                     <td>Email</td>
-                    <td>Bonus Earned</td>
+                    <td>commission Earned</td>
                   </tr>
                 </thead>
                 <tbody>
                   {
                     userData.referred.map(refer =>
                       <tr>
-                        <td>{refer.firstname}</td>
-                        <td>{refer.lastname}</td>
-                        <td>{refer.date}</td>
-                        <td>{refer.email}</td>
-                        <td>${refer.bonus} USD</td>
+                        <td>{refer.firstname ? `${refer.firstname}` : ' '}</td>
+                        <td>{refer.lastname ? `${refer.lastname}` : ' '}</td>
+                        <td>{refer.date ? `${refer.date}` : ' '}</td>
+                        <td>{refer.email ? `${refer.email}` : ''}</td>
+                        <td>{refer.refBonus ? `$${refer.refBonus}` : '$0'} USD</td>
                       </tr>
                     )
                   }
