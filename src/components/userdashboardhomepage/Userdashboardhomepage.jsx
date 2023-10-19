@@ -145,7 +145,7 @@ const Userdashboardhomepage = ({route}) => {
                             <h2>my referral</h2>
                         </div>
                         <div className="referral-text-container small-card">
-                            <h2>{userData ? userData.referred.length : '        '}</h2>
+                            <h2>{userData ? userData.referred.length : '      '}</h2>
                             <p>referred users</p>
                         </div>
                         <div className="referral-text-container small-card">

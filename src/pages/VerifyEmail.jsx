@@ -1,49 +1,45 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import Userdashboardheader from '../components/userdashboardheader/Userdashboardheader'
+import { useParams, useNavigate } from 'react-router-dom'
+import Loader from '../components/Loader'
 const VerifyEmail = ({route}) => {
-    const [validUrl,setValiUrl] = useState(true)
+    const [loader,setLoader] = useState(true)
     const params = useParams()
-    useEffect(()=>{
-            const verifyEmailUrl = async()=>{
-                try {
-                    const url = `${route}/${params.id}/verify/${params.token}`
-                    const req = await fetch(url,{
-                        headers:{
-                            'Content-Type':'application/json'
+    const navigate = useNavigate()
+    useEffect(() => {
+                    setLoader(true)
+                    const referUser = async()=>{
+                    try {
+                        const url = `${route}/${params.id}/refer`
+                        const req = await fetch(url,{
+                            headers:{
+                                'Content-Type':'application/json'
+                            }
+                        })
+                        const res = await req.json()
+                        setLoader(false)
+                        if (res.status === 400) {
+                            navigate('/signup')
                         }
-                    })
-                    const res = await req.json()
-                    console.log(res)
-                    setValiUrl(true)
-                } catch (error) {
+                        else {
+                            navigate('/signup')
+                            localStorage.setItem('referedUser',res.referredUser)
+                        }
+                    } catch (error) {
                     console.log(error)
-                    setValiUrl(false)
-                }
+                    setLoader(false)
+                    navigate('/signup')
+                        }
             }
-            verifyEmailUrl()
+            referUser()
     },[params])
-  return (
+    return (
     <>
-    <Userdashboardheader />
-    <div>
         {
-            validUrl ? 
-            <div className="success-page">
-                <img src="/success.jpg" alt="success_img" className='success-img' />
-                <h3>email verified successfully!</h3>
-                <Link to='/login' >login</Link>
-            </div> : 
-            <div className="failure-page">
-                <img src="/404.jpg" alt="404_img" className='failure-img' />
-                <h3>link has expired</h3>
-                <Link to='/' >home</Link>
-            </div>
-        }
-    </div>
-    </>
-
+            
+           loader && <Loader />
+    }
+    </>    
   )
 }
 
