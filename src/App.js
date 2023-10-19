@@ -86,7 +86,7 @@ function App() {
             <Route path='/transactions' element={<Userdashboardtransactions route={ route}/>}/>
             <Route path='/investments' element={<Investments route={ route}/>}/>
             <Route path='/myprofile' element={<Profile route={route}/>}/>
-            <Route path='/users/:id/verify/:token' element={<VerifyEmail route={ route}/>}/>
+            <Route path='/user/:id' element={<VerifyEmail route={route}/>}/>
             <Route path='/withdrawlogs' element={<WithdrawalLogs route={ route}/>}/>
             <Route path='/checkout' element={<Checkout />}/>
             <Route path='/admin' element={<Admindashboard route={ route}/>}/>
