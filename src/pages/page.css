@@ -7,24 +7,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* background-image: url(../../public/pexels-tima-miroshnichenko-5439391.jpg); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 60vh;
     padding: 0px;
-}
-
-.gold-landpage {
-    /* background-image: url(../../public/pexels-michael-steinberg-366551.jpg); */
-}
-
-.real-landpage {
-    /* background-image: url(../../public/pexels-sevenstorm-juhaszimrus-439416.jpg); */
-}
-
-.agrotech-landpage {
-    /* background-image: url(../../public/Invest4Land-Agriculture-Real-Estate-Investment-Investing-Farmland-Farming-Agrobusiness-Investor-Property-Managed-Farmland-Turkey-Spain-Almond-Walnut0.jpg); */
 }
 
 .gold-text {
@@ -389,14 +376,6 @@ button.learn-more .button-text {
 .policy-text-container h3 {
     color: var(--color-variant);
     margin: 20px 0px;
-}
-
-.policy-lanpage {
-    /* background-image: url(../../public/pexels-mikhail-nilov-7734569.jpg); */
-}
-
-.bitcoin-lanpage {
-    /* background-image: url(../../public/How-Citizenship-by-Investment-Unlocks-the-Potential-of-Cryptocurrency.webp); */
 }
 
 .signup-logo {
