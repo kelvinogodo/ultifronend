@@ -21,10 +21,6 @@ import WithdrawalLogs from './components/WithdrawalLogs';
 import Checkout from './components/Checkout';
 import Admindashboard from './components/admindashboard/Admindashboard';
 import Deposit from './components/deposit/Deposit';
-import Aboutpage from './pages/Aboutpage';
-import Faq from './pages/Faq';
-import Buybitcoin from './pages/Buybitcoin';
-import Policy from './pages/Policy';
 import Viplan from './components/viplan/Viplan';
 function App() {
 
