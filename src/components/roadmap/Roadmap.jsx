@@ -90,18 +90,18 @@ Starwood Capital purchases Westin Hotels & Resorts and begins a new growth phase
         </VerticalTimelineElement>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-    date="1998"
-    contentStyle={{ background: '#f2f2f2', color: 'rgba(81, 46, 95, 1)' }}
-    iconStyle={{ background: 'rgba(81, 46, 95, 1)',  color: '#f2f2f2' }}
-    icon={<BsStar />}
-    contentArrowStyle={{ borderRight: '7px solid  #f2f2f2' }}
+            date="1998"
+            contentStyle={{ background: '#f2f2f2', color: 'rgba(81, 46, 95, 1)' }}
+            iconStyle={{ background: 'rgba(81, 46, 95, 1)',  color: '#f2f2f2' }}
+            icon={<BsStar />}
+            contentArrowStyle={{ borderRight: '7px solid  #f2f2f2' }}
         >
             <p>
            Starwood Capital creates Starwood Financial, subsequently renamed iStar Financial (NYSE: STAR), which becomes one of the largest publicly traded real estate finance companies in the U.S.
 
-Starwood Hotels & Resorts Worldwide completes the $14B acquisition of ITT Sheraton, making the company the largest hotel operator in the world
+            Starwood Hotels & Resorts Worldwide completes the $14B acquisition of ITT Sheraton, making the company the largest hotel operator in the world
 
-First W Hotel opens in New York
+            First W Hotel opens in New York
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement

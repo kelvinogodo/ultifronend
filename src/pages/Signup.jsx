@@ -8,6 +8,7 @@ import {BsEye,BsEyeSlash} from 'react-icons/bs'
 import { useState } from 'react'
 import Swal from 'sweetalert2'
 import Loader from '../components/Loader'
+import '../pages/page.css'
 const Signup = ({route}) => {
   const navigate = useNavigate()
   const [showPassword, setShowPassword] =  useState(false)

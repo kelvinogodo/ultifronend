@@ -1,13 +1,12 @@
 import React from 'react'
 import Userdashboardheader from '../userdashboardheader/Userdashboardheader'
 import {FiArrowRight} from 'react-icons/fi'
-import Checkout from '../Checkout';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import {MdClose} from 'react-icons/md'
 import Swal from 'sweetalert2';
 import WithdrawReview from '../WithdrawReview';
-import { Pagination, Navigation ,FreeMode} from "swiper";
+import { Pagination, Navigation} from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";

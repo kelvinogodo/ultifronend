@@ -1,5 +1,5 @@
 import './App.css';
-import { Profiler, useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion,AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Login from './pages/Login'
@@ -32,24 +32,29 @@ function App() {
       delay: 100
     })
       AOS.refresh()
-    // duration=1200;
+      // duration=1200;
+      Toast.fire({
+              icon: 'warning',
+              title: 'Signed in successfully'
+        })
     }, [])
 
     const Toast = Swal.mixin({
       toast: true,
-      position: 'top-end',
+      position: 'bottom-start',
       showConfirmButton: false,
-      timer: 3000,
+      timer: 10000,
       timerProgressBar: true,
       didOpen: (toast) => {
         toast.addEventListener('mouseenter', Swal.stopTimer)
         toast.addEventListener('mouseleave', Swal.resumeTimer)
       }
     })
-  
+    
     const route = 'https://ultibackend.onrender.com'
   return (
     <>
+      
     <AnimatePresence>
         <Router>
         <motion.div className="App"
