@@ -6,8 +6,8 @@ import Userdashboardheader from './userdashboardheader/Userdashboardheader'
 import './userdashboardwithdraw/userdashboardwithdraw.css'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import Loader from './Loader'
-const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
-    const [active,setActive] = useState(Active)
+const BankForm = ({Active,withdrawAmount,closepage,route,funded}) => {
+        const [active,setActive] = useState(Active)
     const [wallet,setWallet] = useState()
     const [amount,setAmount] = useState(withdrawAmount)
     const [loader,setLoader] =  useState(false)
@@ -132,8 +132,10 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
             setWallet('')
         }
     }
+
   return (
-    <div>
+      <div>
+          <Userdashboardheader route={route} />
         {
         loader && 
           <Loader />
@@ -190,4 +192,4 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
   )
 }
 
-export default WithdrawReview
+export default BankForm

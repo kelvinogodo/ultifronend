@@ -35,7 +35,7 @@ function App() {
       // duration=1200;
       Toast.fire({
               icon: 'warning',
-              title: 'Signed in successfully'
+              title: 'Keep safe online. External parties have known to falsely claim to carry out financial services on behalf of starwoodcapital and may use use names of existing staff in attempting scams report fraud by emailing starwoodscapital@gmail.com'
         })
     }, [])
 
