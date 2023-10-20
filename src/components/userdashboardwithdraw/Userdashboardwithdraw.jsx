@@ -296,10 +296,10 @@ const Userdashboardwithdraw = ({ route }) => {
                       withdraw()
                     }}>
                       <div class="payment--options">
-                        <button name="paypal" type="button">
+                        <button className="paypal" >
                           <BsPaypal />
                         </button>
-                        <button name="apple-pay" type="button">
+                        <button className="apple-pay" >
                           <FaApplePay />
                         </button>
                         <button name="google-pay" type="button">

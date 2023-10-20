@@ -1,6 +1,6 @@
 import React from 'react'
 import './contact.css'
-import {BsFillWalletFill} from 'react-icons/bs'
+import {AiOutlineInstagram} from 'react-icons/ai'
 import {FaPhone,FaTelegramPlane} from 'react-icons/fa'
 import {ImLocation2} from 'react-icons/im'
 import {FiMail} from 'react-icons/fi'
@@ -78,6 +78,14 @@ const Contact = () => {
                 </div>
                 <div className="contact-card-text">
                     <p>Join us on Telegram</p>
+                </div>
+            </div>
+            <div className="contact-card" data-aos="fade-up">
+                <div className="ball contact-ball">
+                    <AiOutlineInstagram />
+                </div>
+                <div className="contact-card-text">
+                    <p>join us on instagram @starwoodcapital</p>
                 </div>
             </div>
             <div className="contact-card" data-aos="fade-up">
