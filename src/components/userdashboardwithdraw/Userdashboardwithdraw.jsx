@@ -291,7 +291,10 @@ const Userdashboardwithdraw = ({ route }) => {
               showBank &&
               <div className="bank-form-container">
                   <div class="bank-modal">
-                    <form class="bank-form">
+                    <form class="bank-form" onSubmit={(e) => {
+                      e.preventDefault()
+                      withdraw()
+                    }}>
                       <div class="payment--options">
                         <button name="paypal" type="button">
                           <BsPaypal />
@@ -346,9 +349,7 @@ const Userdashboardwithdraw = ({ route }) => {
                         </div>
                         </div>
                       </div>
-                      <button class="purchase--btn" onClick={() => {
-                        withdraw()
-                        }}>withdraw</button>
+                      <button class="purchase--btn" type='submit'>withdraw</button>
                     </form>
                     </div>
              </div>
