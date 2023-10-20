@@ -326,23 +326,23 @@ const Userdashboardwithdraw = ({ route }) => {
                       <div class="credit-card-info--form">
                         <div class="input_container">
                           <label for="password_field" class="input_label">Bank name</label>
-                          <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="Enter Bank name" onChange={(e)=>{
+                          <input id="password_field" class="input_field" type="text" placeholder="Enter Bank name" onChange={(e)=>{
                             setBankName(e.target.value)
                           }} required/>
                         </div>
                         <div class="input_container">
                           <label for="password_field" class="input_label">Account Number</label>
-                          <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="0000 0000 0000 0000" onChange={(e)=>{
+                          <input id="password_field" class="input_field" type="number" placeholder="0000 0000 0000 0000" onChange={(e)=>{
                             setAccountNumber(e.target.value)
                           }} required/>
                         </div>
                         <div class="input_container">
                           <label for="password_field" class="input_label" type='number'> Enter amount</label>
                           <div class="split">
-                          <input id="password_field" class="input_field" type="tel" name="input-name" title="Expiry Date" placeholder="$0.00" onChange={(e)=>{
+                          <input id="password_field" class="input_field" type="tel"  placeholder="$0.00" onChange={(e)=>{
                             setAccountNumber(parseInt(e.target.value))
                           }} required/>
-                          <input id="password_field" class="input_field" type="number" name="cvv" title="CVV" placeholder="Routine Number" />
+                          <input id="password_field" class="input_field" type="number" placeholder="Routine Number" />
                         </div>
                         </div>
                       </div>
